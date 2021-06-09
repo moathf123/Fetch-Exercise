@@ -2,13 +2,13 @@
 
 Hello Fetch Rewarding Evaluating team.
 
-1. i have one main activity that holds fragment navigation with just one fragment
+1. there is one main activity that holds fragment navigation with just one fragment
 
-2.in network package there are two files one to as model and the other one
+2.in the network package there are two files one to as model and the other one
   used to connect to network and fetch the data using retrofit and moshi
   for pasring Json 
 
-3.in hiring list package there are 3 files 
+3.in the hiring list package there are 3 files 
   3.a hiring adapter for recycler view where i used list adpater
   3.b hiring list fragment for binding and view model observer
   3.c hiring list view model where i used coroutine and sort the list
