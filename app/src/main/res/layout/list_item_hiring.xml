@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/spacing_small">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/textView_listItem_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+    <data>
 
-    <TextView
-        android:id="@+id/textView_listItem_listid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+        <variable
+            name="networkHiring"
+            type="com.example.fetchexercise.network.NetworkHiring" />
+    </data>
 
-    <TextView
-        android:id="@+id/textView_listItem_name"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
-</LinearLayout>
+        android:layout_margin="@dimen/spacing_small">
+
+        <TextView
+            android:id="@+id/textView_listItem_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{networkHiring.id}" />
+
+        <TextView
+            android:id="@+id/textView_listItem_listid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{networkHiring.listId}" />
+
+        <TextView
+            android:id="@+id/textView_listItem_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{networkHiring.name}" />
+    </LinearLayout>
+</layout>
