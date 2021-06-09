@@ -10,7 +10,7 @@ import retrofit2.http.GET
 
 interface HiringListService {
     @GET("hiring.json")
-    fun getHiringlist(): Deferred<List<NetworkHiring>>
+    fun getHiringlist(): Deferred<MutableList<NetworkHiring>>
 }
 
 /**

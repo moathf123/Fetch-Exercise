@@ -39,6 +39,7 @@ class HiringListFragment : Fragment() {
         viewModel.hiring.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.submitList(it)
+
             }
         })
     }
