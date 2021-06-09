@@ -18,14 +18,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@{networkHiring.id}" />
+            android:text="@{Integer.toString(networkHiring.id)}" />
 
         <TextView
             android:id="@+id/textView_listItem_listid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@{networkHiring.listId}" />
+            android:text="@{Integer.toString(networkHiring.listId)}" />
 
         <TextView
             android:id="@+id/textView_listItem_name"
