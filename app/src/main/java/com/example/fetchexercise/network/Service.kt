@@ -1,5 +1,6 @@
 package com.example.fetchexercise.network
 
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.Deferred
@@ -9,7 +10,7 @@ import retrofit2.http.GET
 
 interface HiringListService {
     @GET("hiring.json")
-    fun getHiringlist(): Deferred<NetworkHiringContainer>
+    fun getHiringlist(): Deferred<List<NetworkHiring>>
 }
 
 /**
@@ -24,8 +25,9 @@ private val moshi = Moshi.Builder()
  */
 object Network {
     private val retrofit = Retrofit.Builder()
-        .baseUrl("https://fetch-hiring.s3.amazonaws.com/hiring.json")
+        .baseUrl("https://fetch-hiring.s3.amazonaws.com/")
         .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .build()
 
     val Hirings = retrofit.create(HiringListService::class.java)
